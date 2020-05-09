@@ -1,5 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_signed.ALL;
 
 entity z2top is
     Port ( x : in STD_LOGIC_VECTOR (7 downto 0);
@@ -33,9 +34,9 @@ signal reg0, reg1, reg2, reg3,reg4: STD_LOGIC_VECTOR (15 downto 0);
 
 begin
 h0 <= x"01";
-h1 <= x"01";
+h1 <= x"ff";
 h2 <= x"01";
-h3 <= x"01";
+h3 <= x"ff";
 h4 <= x"01";
 
 h_u0: h port map(x,h0,mul0);
@@ -56,4 +57,5 @@ sum_u2: adder port map(reg2,mul3,sum2);
 sum_u3: adder port map(reg3,mul4,sum3);
 
 y <= reg4(7 downto 0);
+--y <= sum3(7 downto 0);
 end Behavioral;
