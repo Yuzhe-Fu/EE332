@@ -3,7 +3,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_signed.ALL;
 
 entity for_z2top is
-    generic (WIDTH: natural:=5);
+    generic (WIDTH: natural:=52);-- the number of h
     Port ( x : in STD_LOGIC_VECTOR (7 downto 0);
            clk : in STD_LOGIC;
            rst : in STD_LOGIC;
@@ -39,12 +39,60 @@ signal finalout: STD_LOGIC_VECTOR (15 downto 0);
 
 begin
 process(clk, rst) begin 
-        if(rst = '1')then         
+        if(rst = '1')then 
+        --set up h value here     
         h_value(0)<=x"01";
         h_value(1)<=x"ff";
         h_value(2)<=x"01";
         h_value(3)<=x"ff";
         h_value(4)<=x"01";
+        h_value(5)<=x"ff";
+        h_value(6)<=x"01";
+        h_value(7)<=x"ff";
+        h_value(8)<=x"01";
+        h_value(9)<=x"ff";
+        h_value(10)<=x"01";
+        h_value(11)<=x"ff";
+        h_value(12)<=x"01";
+        h_value(13)<=x"ff";
+        h_value(14)<=x"01";
+        h_value(15)<=x"ff";
+        h_value(16)<=x"01";
+        h_value(17)<=x"ff";
+        h_value(18)<=x"01";
+        h_value(19)<=x"ff";
+        h_value(20)<=x"01";
+        h_value(21)<=x"ff";
+        h_value(22)<=x"01";
+        h_value(23)<=x"ff";
+        h_value(24)<=x"01";
+        h_value(25)<=x"ff";
+        h_value(26)<=x"01";
+        h_value(27)<=x"ff";
+        h_value(28)<=x"01";
+        h_value(29)<=x"ff";
+        h_value(30)<=x"01";
+        h_value(31)<=x"ff";
+        h_value(32)<=x"01";
+        h_value(33)<=x"ff";
+        h_value(34)<=x"01";
+        h_value(35)<=x"ff";
+        h_value(36)<=x"01";
+        h_value(37)<=x"ff";
+        h_value(38)<=x"01";
+        h_value(39)<=x"ff";
+        h_value(40)<=x"01";
+        h_value(41)<=x"ff";
+        h_value(42)<=x"01";
+        h_value(43)<=x"ff";
+        h_value(44)<=x"01";
+        h_value(45)<=x"ff";
+        h_value(46)<=x"01";
+        h_value(47)<=x"ff";
+        h_value(48)<=x"01";
+        h_value(49)<=x"ff";
+        h_value(50)<=x"01";
+        h_value(51)<=x"ff";
         end if;
 end process;
 
