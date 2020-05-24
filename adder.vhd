@@ -4,9 +4,9 @@ use IEEE.STD_LOGIC_signed.ALL;
 use ieee.numeric_std.all;
 
 entity adder is
-    Port ( a : in STD_LOGIC_VECTOR (15 downto 0);
-           b : in STD_LOGIC_VECTOR (15 downto 0);
-           s : out STD_LOGIC_VECTOR (15 downto 0));
+    Port ( a : in STD_LOGIC_VECTOR (23 downto 0);
+           b : in STD_LOGIC_VECTOR (23 downto 0);
+           s : out STD_LOGIC_VECTOR (23 downto 0));
 end adder;
 architecture Behavioral of adder is
 --signal a_temp: STD_LOGIC_VECTOR (23 downto 0);
